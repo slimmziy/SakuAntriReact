@@ -6,6 +6,8 @@ import { AppLoading } from 'expo';
 
 import LoginScreen from './screens/LoginScreen';
 import HomeScreen from './screens/HomeScreen';
+import AccountScreen from './screens/AccountScreen.';
+import ListScreen from './screens/ListScreen';
 
 function cacheImages(images) {
   return images.map(image => {
@@ -49,7 +51,9 @@ export default class App extends React.Component {
 }
 
 const AppStackNavigator = createStackNavigator({
-  Login: LoginScreen,
+  // List : ListScreen,
+  // Account : AccountScreen,
+  // Login: LoginScreen,
   Home: HomeScreen
 })
 

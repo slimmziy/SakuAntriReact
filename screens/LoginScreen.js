@@ -13,8 +13,7 @@ import {
 let { StyleSheet } = React;
 
 import styles from '../style/style';
-import HomeScreen from '../screens/HomeScreen'
-import { Asset } from 'expo-asset';
+import HomeScreen from '../screens/HomeScreen';
 
 class LoginScreen extends Component {
     
@@ -59,10 +58,10 @@ class LoginScreen extends Component {
                 <TextInput style={input} secureTextEntry={true} placeholderTextColor="#2F4F4F" placeholder="Password" onChangeText={text => this.setState({ password: text })} />
                 <View style={{marginLeft: 20, marginRight: 20}}>
                     <Button title="Masuk"
-                        onPress={_ => this.checkLogin()} />
+                        onPress={_ => this.checkLogin()}/>
                 </View>
                 <View>
-                <Text numberOfLines={1} style={{padding: 40}}>
+                    <Text numberOfLines={1} style={{ padding: 40 }}>
                         __________________________________________
                     </Text>
                 </View>

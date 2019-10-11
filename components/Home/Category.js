@@ -8,10 +8,6 @@ import {
 
 class Category extends Component {
 
-    static navigationOptions = {
-        header: null
-    }
-
     render() {
         return (
             <View style={{ height: 130, width: 130, marginLeft: 20, borderWidth: 0.5, borderColor: '#dddddd', borderRadius: 10 }} onPress>

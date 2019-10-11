@@ -10,6 +10,19 @@ export default StyleSheet.create({
         fontSize: 25,
         textAlign: 'center',
         paddingBottom: 20,
+        fontWeight: '700'
+    },
+
+    headingAccount: {
+        fontSize: 25,
+        paddingBottom: 20,
+        paddingTop: 40,
+        paddingLeft: 20,
+    },
+
+    normal: {
+        fontSize: 14,
+        textAlign: 'center',
     },
 
     input: {
@@ -27,11 +40,26 @@ export default StyleSheet.create({
         width: 100,
     },
 
+    imageAccount: {
+        height: 150,
+        width: 150,
+        paddingBottom: 50,
+        borderRadius: 100
+    },
+
     signupButton: {
         color: 'black',
         fontWeight: '700',
         fontSize: 16,
     },
+    
+    logoutButton: {
+        marginBottom: 30,
+        width: 100,
+        alignItems: 'center',
+        backgroundColor: '#2196F3',
+        elevation: 5
+      },
 
     signupTextCont: {
 
@@ -43,5 +71,29 @@ export default StyleSheet.create({
     signupText: {
         color: 'black',
         fontSize: 16
+    },
+
+    alternativeLayoutButtonContainer: {
+        // margin: 20,
+        flexDirection: 'row',
+        justifyContent: 'center'
+      },
+
+      buttonText: {
+        textAlign: 'center',
+        padding: 20,
+        color: 'white'
+      },
+
+      cardTextHeading: {
+          fontSize: 22,
+          fontWeight: '700',
+      },
+      cardTextNormal: {
+        fontSize: 16,
+    },
+    cardTextNomor: {
+        fontSize: 26,
+        fontWeight: '700',
     },
 })
