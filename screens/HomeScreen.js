@@ -10,118 +10,114 @@ import {
     ScrollView,
     Image,
     Dimensions,
+    Alert,
+    TouchableOpacity
 } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 
 import Category from '../components/Home/Category';
+import styles from '../style/style';
 
 const { height, width } = Dimensions.get('window')
 
 class HomeSceen extends Component {
 
-    componentWillMount() {
-        this.startHeaderHeight = 80
-        if(Platform.OS == 'android') {
-            this.startHeaderHeight = 100 + StatusBar.currentHeight
-        }
-    }
-
-    static navigationOptions = {
-        header: null
-    }
+    // componentWillMount() {
+    //     this.startHeaderHeight = 80
+    //     if(Platform.OS == 'android') {
+    //         this.startHeaderHeight = 100 + StatusBar.currentHeight
+    //     }
+    // }
 
     render() {
         return (
+            <View style={{ flex: 1, backgroundColor: 'white' }}>
+                <ScrollView scrollEventThrotle={16} >
+                    <View style={{ flex: 1, backgroundColor: 'white' }}>
 
-                <View style={{ flex: 1, backgroundColor: 'white' }}>
-                    <ScrollView scrollEventThrotle={16} >
+                        <View >
+                            <Text style={styles.headingAccount}>SakuAntri</Text>
+                        </View>
 
-                        <View style={{ flex: 1, backgroundColor: 'white', paddingTop: 20 }}>
-                            <Text style={{
-                                fontSize: 24, fontWeight: '700',
-                                paddingHorizontal: 20
-                            }}>
-                                ANTRIAN TERAKHIR
-                    </Text>
+                        <View style={{ paddingHorizontal: 20 }}>
+                            <Text style={styles.heading}>ANTRIAN TERAKHIR</Text>
+                        </View>
 
-                            <View style={{ height: 130, marginTop: 20 }}>
-                                <ScrollView
-                                    horizontal={true}
-                                    showsHorizontalScrollIndicator={false}
-                                >
-
+                        <View style={{ height: 130, marginTop: 20 }}>
+                            <ScrollView
+                                horizontal={true}
+                                showsHorizontalScrollIndicator={false}>
+                                <TouchableOpacity>
                                     <Category imageUri={require('../assets/wasd2.png')}
                                         name="Terakhir 1" />
-                                    <Category imageUri={require('../assets/wasd2.png')}
-                                        name="Terakhir 2" />
-                                    <Category imageUri={require('../assets/wasd2.png')}
-                                        name="Terakhir 3" />
-                                    <Category imageUri={require('../assets/wasd2.png')}
-                                        name="Terakhir 4" />
-                                </ScrollView>
-                            </View>
+                                    
+                                </TouchableOpacity>
 
-                            <View style={{ marginTop: 40, paddingHorizontal: 20 }}>
-                                <Text style={{ fontSize: 24, fontWeight: '700' }}>
+                                <Category imageUri={require('../assets/wasd2.png')}
+                                    name="Terakhir 2" />
+                                <Category imageUri={require('../assets/wasd2.png')}
+                                    name="Terakhir 3" />
+                                <Category imageUri={require('../assets/wasd2.png')}
+                                    name="Terakhir 4" />
+                            </ScrollView>
+                        </View>
+
+                        <View >
+                            <View style={{ paddingTop: 20, paddingHorizontal: 20 }}>
+                                <Text style={styles.heading}>
                                     ANTRIAN POPULER
-                            </Text>
-                                <Text style={{ fontWeight: '100', marginTop: 10 }}>
-                                    Semua yang kamu mau tunggu, jadi satu disini
-                            </Text>
+                                </Text>
+                            </View>
+                            <View style={{ paddingHorizontal: 20 }}>
+                                <Text style={styles.normal}>Semua yang kamu mau tunggu, jadi satu disini</Text>
 
-                                <View style={{ flex: 1, width: width - 40, height: 200, marginTop: 20, borderRadius: 10, borderWidth: 1, borderColor: '#dddddd' }}>
+                                <View style={{ width: width - 40, height: 250, marginTop: 20, borderRadius: 10, borderWidth: 1, borderColor: '#dddddd' }}>
                                     <Image
-                                        style={{ flex: 4, height: null, width: null, resizeMode: 'cover', borderRadius: 10 }}
-                                        source={require('../assets/wasd2.png')}
-                                    />
+                                        style={{ flex: 2.5, height: null, width: null, resizeMode: 'cover', borderRadius: 10 }}
+                                        source={require('../assets/wasd2.png')} />
                                     <View style={{ flex: 1, paddingLeft: 10, paddingTop: 10 }}>
-                                        <Text>
+                                        <Text style={styles.semiHeading}>
                                             Antrian paling populer
-                                    </Text>
+                                        </Text>
+                                        <Text style={styles.normal}>
+                                            Skidipappap Sawadihap Konkunhap Alahaphapljhdfsglhdflghdlfkhg
+                                        </Text>
                                     </View>
                                 </View>
                             </View>
+                        </View>
 
-                            <View style={{ height: 130, marginTop: 10 }}>
-                                <ScrollView
-                                    horizontal={true}
-                                    showsHorizontalScrollIndicator={false}
-                                >
+                        <View style={{ height: 130, marginTop: 10 }}>
+                            <ScrollView
+                                horizontal={true}
+                                showsHorizontalScrollIndicator={false}>
 
-                                    <Category imageUri={require('../assets/wasd2.png')}
-                                        name="Populer 1" />
-                                    <Category imageUri={require('../assets/wasd2.png')}
-                                        name="Populer 2" />
-                                    <Category imageUri={require('../assets/wasd2.png')}
-                                        name="Populer 3" />
-                                    <Category imageUri={require('../assets/wasd2.png')}
-                                        name="Populer 4" />
-                                </ScrollView>
-                            </View>
+                                <Category imageUri={require('../assets/wasd2.png')}
+                                    name="Populer 1" />
+                                <Category imageUri={require('../assets/wasd2.png')}
+                                    name="Populer 2" />
+                                <Category imageUri={require('../assets/wasd2.png')}
+                                    name="Populer 3" />
+                                <Category imageUri={require('../assets/wasd2.png')}
+                                    name="Populer 4" />
+                            </ScrollView>
+                        </View>
 
-                            <View style={{ marginTop: 40, paddingHorizontal: 20 }}>
-                                <Text style={{ fontSize: 24, fontWeight: '700' }}>
-                                    KATEGORI
+                        <View style={{ marginTop: 40, paddingHorizontal: 20 }}>
+                            <Text style={{ fontSize: 24, fontWeight: '700' }}>
+                                KATEGORI
                             </Text>
-                            </View>
-                            {/*Grid*/}
-                            <View>
-
-                            </View>
+                        </View>
+                        {/*Grid*/}
+                        <View>
 
                         </View>
-                    </ScrollView>
-                </View>
+
+                    </View>
+                </ScrollView>
+            </View >
         );
     }
 }
 
 export default HomeSceen;
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        alignItems: 'center',
-        justifyContent: 'center'
-    }
-});

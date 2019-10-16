@@ -17,13 +17,9 @@ class AccountScreen extends Component {
         this.props.navigation.navigate('Login')
     }
 
-    static navigationOptions = {
-        header: null
-    }
-
     render() {
         return (
-            <View >
+            <View style={{ flex: 1, backgroundColor: 'white' }}>
                 <View >
                     <Text style={styles.headingAccount}>Akun</Text>
                 </View>

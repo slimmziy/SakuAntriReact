@@ -7,7 +7,7 @@ import {
     Alert,
     Image,
     TouchableOpacity,
-    ImageBackground
+    ImageBackground,
 } from 'react-native';
 
 let { StyleSheet } = React;
@@ -16,26 +16,21 @@ import styles from '../style/style';
 import HomeScreen from '../screens/HomeScreen';
 
 class LoginScreen extends Component {
-    
 
-    static navigationOptions = {
-        header: null
-    }
-
-    state = { username: "", password: "" }
+    state = { email: "", password: "" }
 
     checkLogin() {
-        const { username, password } = this.state
-        if (username == 'admin' && password == 'admin') {
+        const { email, password } = this.state
+        if (email == 'admin' && password == 'admin') {
 
-            // fetch('http://localhost:0000', {method: 'POST', body: `username=${username}&password=${password}`})
+            // fetch('http://localhost:0000', {method: 'POST', body: `email=${email}&password=${password}`})
             // .then (res => {
             //     console.warn(res)
             // })
 
             this.props.navigation.navigate('Home')
         } else {
-            Alert.alert('Cek lagi dong', 'Username/Password salah', [{
+            Alert.alert('Cek lagi dong', 'Email/Password salah', [{
                 text: 'Kembali'
             }])
         }
@@ -54,7 +49,7 @@ class LoginScreen extends Component {
                 </View>
 
                 <Text style={heading}>Silahkan masuk</Text>
-                <TextInput style={input} placeholder="Username" placeholderTextColor="#2F4F4F"  onChangeText={text => this.setState({ username: text })} />
+                <TextInput style={input} placeholder="Email" placeholderTextColor="#2F4F4F"  onChangeText={text => this.setState({ email: text })} />
                 <TextInput style={input} secureTextEntry={true} placeholderTextColor="#2F4F4F" placeholder="Password" onChangeText={text => this.setState({ password: text })} />
                 <View style={{marginLeft: 20, marginRight: 20}}>
                     <Button title="Masuk"

@@ -11,13 +11,9 @@ import styles from '../style/style'
 
 class ListScreen extends Component {
 
-    static navigationOptions = {
-        header: null
-    }
-
     render() {
         return (
-            <View>
+            <View style={{ flex: 1, backgroundColor: 'white' }}>
                 <View >
                     <Text style={styles.headingAccount}>Antrianku</Text>
                 </View>

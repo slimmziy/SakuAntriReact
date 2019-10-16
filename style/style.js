@@ -7,10 +7,13 @@ export default StyleSheet.create({
     },
 
     heading: {
-        fontSize: 25,
-        textAlign: 'center',
-        paddingBottom: 20,
-        fontWeight: '700'
+        fontSize: 18,
+        fontWeight: '500',
+    },
+
+    semiHeading: {
+        fontSize: 18,
+        fontWeight: '700',
     },
 
     headingAccount: {
@@ -18,11 +21,12 @@ export default StyleSheet.create({
         paddingBottom: 20,
         paddingTop: 40,
         paddingLeft: 20,
+        fontWeight: '700',
+
     },
 
     normal: {
         fontSize: 14,
-        textAlign: 'center',
     },
 
     input: {
@@ -86,7 +90,7 @@ export default StyleSheet.create({
       },
 
       cardTextHeading: {
-          fontSize: 22,
+          fontSize: 20,
           fontWeight: '700',
       },
       cardTextNormal: {
